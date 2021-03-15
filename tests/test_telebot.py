@@ -500,7 +500,7 @@ class TestTeleBot:
         ret_msg = tb.send_audio(CHAT_ID, file_data, caption='<b>bold</b>', parse_mode='HTML')
         assert ret_msg.caption_entities[0].type == 'bold'
 
-    def test_send_voice_formatting_caprion(self):
+    def test_send_voice_formatting_caption(self):
         file_data = open('./test_data/record.ogg', 'rb')
         tb = telebot.TeleBot(TOKEN)
         ret_msg = tb.send_voice(CHAT_ID, file_data, caption='<b>bold</b>', parse_mode='HTML')
